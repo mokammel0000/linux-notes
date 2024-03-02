@@ -1,0 +1,82 @@
+System Controlling: 
+
+    [ps]: Displays information about active processes.
+    [top]: Shows a dynamic view of system processes.
+    [kill <PID>]: Sends a signal to terminate a process.
+
+    [sudo shutdown -h now]: Shuts down the system immediately.
+    [sudo shutdown -h +5]: Shuts down the system in 5 minutes (you can change the time).
+
+    [sudo poweroff]: Powers off the system.
+    [sudo halt]: Halts the system, stopping all processes. Similar to poweroff, but it doesn't turn off the hardware.
+
+    [sudo systemctl restart <service>]: Restarts a specific system service.
+    [sudo systemctl status <service>]: Shows the status of a specific system service.
+
+-----------------------------------------------------------------------------------------------------------------------
+System Commands: 
+
+    [sudo dnf --help]: List of main Commands. 
+
+    [sudo dnf check-update]:
+        used to check for available package updates without actually installing them.
+        It provides a list of packages that have updates available.
+        This is useful if you want to see what updates are pending before deciding to install them.
+
+    [sudo dnf update]:
+    [sudo dnf upgrade]:  (older alias)
+        used to update all installed packages on your system to their latest versions.
+        When you run sudo dnf update, DNF (Dandified Yum)
+            checks for updates for all installed packages and installs the latest versions if available.
+        It also resolves dependencies and ensures that your system is up to date with the latest software.
+
+    [sudo dnf --refresh update]:
+    [sudo dnf --refresh upgrade]:
+        The --refresh option tells DNF 
+            to check for the latest package information from the configured repositories before attempting the upgrade.
+        It ensures that DNF has the latest metadata about available packages.
+        So, this command not only upgrades packages but also refreshes the package information before doing so.
+
+
+    [sudo dnf check]:
+        check for and fix (broken dependencies),
+        If there are any broken dependencies, you'll get a list of packages causing the issues.
+        You can then try to fix them by reinstalling or removing the problematic packages.
+
+    [sudo dnf autoremove]: 
+        remove any orphaned packages (packages that were installed as dependencies but are no longer required)
+
+    [sudo dnf clean all]:
+        Cleans the local repository cache.
+
+-----------------------------------------------------------------------------------------------------------------------
+Repositories: 
+
+    [sudo dnf repolist]: Displays a list of enabled repositories.
+    
+-----------------------------------------------------------------------------------------------------------------------
+Packages: 
+
+    [sudo dnf list installed]: Lists all installed packages on your system.
+
+    [sudo dnf list available]: Lists all packages available in the configured repositories.
+
+    [sudo dnf config-manager --set-enabled repository_name]: Enables a specific repository.
+
+    [sudo dnf config-manager --set-disabled repository_name]: Disables a specific repository.
+
+
+    [sudo dnf install packagename]: To install the package.
+
+    [sudo dnf reinstall packagename]: To reinstall the package.
+
+    [sudo dnf remove packagename]: To remove a package.
+    
+    [sudo dnf remove --erase package-name]: To remove the configuration files associated with the package.
+
+    [sudo dnf update package_name]: Use this command to update a specific package to its latest version.
+
+    
+    [sudo dnf search keyword]: To search for packages containing the specified keyword.
+
+    [sudo dnf info package_name]: Provides detailed information about a specific package.

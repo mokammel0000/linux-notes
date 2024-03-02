@@ -1,0 +1,30 @@
+DNF:
+    Stands for (Dandified Yum)
+
+    It was introduced (as a replacement for Yum), providing additional features and improvements, DNF is an evolution of Yum.
+    Is considered the successor (خليفة) to Yum and was introduced to (address some limitations) and (improve upon certain aspects).  
+
+    Is a higher-level package management tool that relies on (RPM) underneath.
+
+    Is more user-friendly and handles dependency resolution.
+    When you install a package with DNF, it (automatically resolves and installs the required dependencies).
+
+    Also supports modular repositories, making it easier to manage software versions and configurations.
+    interacts with RPM in the background, using it to install and manage packages.
+
+
+    -DNF is generally faster and more efficient than Yum. 
+
+    -DNF has a better dependency resolver,
+        It can handle dependencies more intelligently, providing more accurate and reliable results compared to Yum.
+
+    -DNF features a transaction synchronizer,
+        which ensures that multiple packages can be installed or updated together in a consistent manner. 
+    
+    -DNF commands often have more consistent and user-friendly options compared to Yum.
+
+    -DNF provides better support for (Undoing) transactions and reviewing the history of package management operations on the system.
+        Users can easily review and revert changes made by DNF.
+
+    -DNF has improved support for modular repositories,
+        which allows users to choose different versions of software components independently.

@@ -1,0 +1,13 @@
+1- Install Windows on a specific size of the hard (e.g. 130 GB). 
+    -Local Account. 
+    -Install all updates (critical Point).
+    -university email.
+    -Office
+    -sign in in edge with your account and install other programs.
+
+
+2- Install Ubuntu on the free Space: 
+    -1024 MB:   EFI system partition (primary - Begining), 
+    -Remaining: EXT4                 (primary - Begining), 
+
+    => Important: choose this option: [Windows Boot من تحت].

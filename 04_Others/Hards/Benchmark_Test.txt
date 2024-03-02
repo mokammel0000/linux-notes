@@ -1,0 +1,29 @@
+[Benchmark Test]:
+    is a test or set of tests designed to evaluate and measure the performance of the hard drive.
+    
+    It's purpose is to assess how well a hard drive performs under specific conditions,
+        allowing users to compare different drives and make informed decisions based on their performance requirements.
+        
+    It gives you an overview of the following: 
+    -Data transfer rates:
+        This measures how quickly data can be read from or written to the hard drive.
+        It's often expressed in megabytes per second (MB/s) or gigabytes per second (GB/s).
+
+    -I/O operations per second (IOPS):
+        IOPS measures the number of input/output operations a hard drive can perform in a second.
+        It's particularly important for tasks that involve many small, random reads and writes, such as in database applications.
+
+    -Access time:
+        This measures the time it takes for the drive to locate and retrieve data.
+        (Lower access times generally indicate better performance).
+
+    -Sequential and random read/write performance:
+        Different workloads have different characteristics.
+        Some applications involve reading or writing data sequentially (e.g., video streaming),
+            while others involve random access (e.g., databases).
+        Benchmarks often test both types of performance.
+
+    -Latency:
+        Latency is the time it takes for the drive to respond to a data request.
+        (Lower latency is generally preferred), especially in applications where quick response times are crucial.
+

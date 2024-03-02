@@ -1,0 +1,9 @@
+If it wasn't installed yet: 
+    sudo dnf update
+    sudo dnf install git
+    git --version
+
+
+Open this 2 links: 
+    https://tecadmin.net/install-laravel-on-fedora/
+    https://tecadmin.net/install-lamp-on-fedora/

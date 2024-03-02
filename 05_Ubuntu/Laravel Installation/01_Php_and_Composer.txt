@@ -1,0 +1,12 @@
+sudo apt update && sudo apt upgrade
+
+
+Install php and it's packages: 
+	sudo apt install php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli php-zip php-bcmath php-tokenizer php-json php-pear php-curl phpunit php-fpm php-common php-mysql
+
+		
+Install Composer: 
+	sudo apt install composer
+	
+	[untill this step, you can install and run laravel project using the local server on php,
+		but you can't deal with DB, because you haven't installed it yet].

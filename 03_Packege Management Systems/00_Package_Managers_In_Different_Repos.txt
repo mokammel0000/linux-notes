@@ -1,0 +1,28 @@
+Debian-based distributions:
+    -(APT): Used for package management. Commands include apt-get and apt.
+            a higher-level package management tool that (relies on dpkg) underneath.
+    -(dpkg): A lower-level package management tool.
+
+
+Red Hat-based distributions:
+    -(dnf): A modern package manager used in recent versions of Fedora and CentOS.
+            a higher-level package management tool that (relies on RPM) underneath.
+    -(RPM): Commands include rpm for installing, querying, and uninstalling packages.
+            low-level package management system, doesn't handle dependencies.
+    
+
+
+Arch Linux:
+    -(Pacman): The package manager for Arch Linux. Commands include pacman for installing, updating, and managing packages.
+
+
+SUSE-based distributions: e.g., openSUSE
+    -(zypper): Package manager for SUSE Linux distributions.
+
+
+Gentoo:
+    -(Portage): The package management system for Gentoo, where packages are compiled from source code.
+
+
+Slackware:
+    -(pkgtool): Slackware's package management tool.

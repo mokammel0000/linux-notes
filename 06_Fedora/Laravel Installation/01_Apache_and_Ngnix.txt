@@ -1,0 +1,99 @@
+Both Nginx and Apache are capable of (serving) Laravel applications,
+
+The choice between them often depends on 
+        -your specific requirements,
+        -familiarity with the server,
+        -and the characteristics of your application.
+
+In some cases, developers choose to use both Nginx and Apache together in a setup called "Nginx as a reverse proxy for Apache."
+    Nginx handles incoming requests and forwards dynamic content requests to Apache, which then processes them.
+    This combination allows you to 
+    leverage the performance benefits of Nginx while still benefiting from Apache's extensive module support.
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+A (LAMP) stack is a popular combination of open-source software that is used to power web applications.
+It is composed of four main components: 
+    -Linux operating system, 
+    -(Apache) web server, 
+    -MySQL relational database management system, 
+    -PHP programming language.
+
+Apache HTTP Server:
+    A free and open-source web server software.
+    plays a crucial role in serving web pages to users on the internet.
+    known for its reliability and performance.
+
+    [sudo dnf update]
+
+    [rpm -q httpd]: 
+        Check if the Apache package is installed.
+    
+    [sudo dnf install httpd]: 
+        Installing Apache on fedora.
+
+    [sudo systemctl status httpd]: 
+        check if the Apache service is running.
+    
+    [sudo systemctl start httpd]: 
+        Start the Apache service.
+    
+    [sudo systemctl enable httpd]: 
+        Enable Apache to start on boot.
+
+    [sudo systemctl restart httpd]: 
+        Restart Apache.
+
+
+    Enter (http://localhost) on a web browser to check if apache is enabled
+-------------------------------------------------------------------------------------------------------------------------------
+Nginx: ( "engine-x")
+    Nginx is a popular open-source web server, reverse proxy server, and load balancer. 
+    is known for its high performance, stability, and scalability
+    is widely used to serve static content
+    is a popular choice for serving Laravel applications, and it's commonly recommended for several reasons:
+
+    High Performance:
+        Nginx is known for its high performance and low resource usage.
+        Its event-driven architecture allows it to handle a large number of concurrent connections efficiently.
+        This can be beneficial for Laravel applications, especially in scenarios with high traffic.
+
+    Simplicity: 
+        Nginx's configuration syntax is often considered more straightforward and easier to work with compared to Apache.
+        This simplicity can be advantageous when setting up and configuring your server for Laravel applications.
+
+    Reverse Proxy: 
+        Nginx can act as a reverse proxy server,
+        forwarding requests from clients to other servers and returning the responses to clients.
+        serving static content and forwarding dynamic requests to a backend server (e.g., PHP-FPM for Laravel applications).
+
+    Load Balancing:
+        Nginx can distribute incoming network traffic across multiple servers
+        to ensure optimal resource utilization and reliability.
+    
+    SSL/TLS Termination:
+        It can handle SSL/TLS encryption and decryption, offloading this task from the web servers.
+
+    HTTP Server:
+        Nginx can serve static content directly, such as HTML, CSS, and images, reducing the load on application servers.
+
+    Security Features:
+        Nginx includes features to help secure web applications, such as access controls, secure connections, and rate limiting.
+
+    Documentation and Community Support: 
+        Nginx has extensive documentation and a large community,
+        which can be beneficial when seeking help or finding resources for configuring and optimizing your server for Laravel.
+
+    [sudo dnf update]
+
+    [rpm -q nginx]: Check if the Nginx package is installed
+    
+    [sudo dnf install nginx]: Installing Nginx on fedora.
+    
+    [sudo systemctl status nginx]: Check the Nginx service status
+
+    [sudo systemctl start nginx]: Start the Nginx service.
+
+    [sudo systemctl enable nginx]: Enable Nginx to start on boot.
+
+    [sudo systemctl restart nginx]: Restart Nginx.

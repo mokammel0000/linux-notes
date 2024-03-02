@@ -1,0 +1,81 @@
+sudo dnf --refresh upgrade
+
+[Telegram]:  Flathub
+--------------------------------------------------------------------------------------------------------------------
+
+[vscode]:  From Terminal (to use shourtcuts Effictively)
+[vscodium]:  Flathub
+--------------------------------------------------------------------------------------------------------------------
+
+[github]: 
+    1- flatpak search github: git github desktop id
+    2- flatpak install flathub io.github.shiftey.Desktop: flatpak install flathub <github-desktop-package-name>
+    3- flatpak run io.github.shiftey.Desktop
+--------------------------------------------------------------------------------------------------------------------
+
+[Firefox]: for whatsapp & discord & any documentation (like fedora workstation).
+[Brave]: Flathub
+    -Brave Rewards: 
+        This feature allows you to earn BAT (Basic Attention Token) by viewing privacy-respecting ads, 
+        then you can use BAT to support your favorite content creators.
+        stop them.
+
+    -Brave Leo(similar to Bing): 
+        stop it. Settings-> LEO-> off
+
+    -Reader Mode: 
+        Settings-> Apperance-> Content-> SpeedReader-> active.
+        you can install extensions from the Chrome Web Store like: (Mercury Reader) or (Read Mode).
+    
+    -Privacy & Security Settings:
+        -choose a search engine that respects your privacy, You can select options like [DuckDuckGo] or [Qwant].
+        -use the "New Private Window with Tor" option, which routes your internet traffic through the Tor network.
+        -Use secure DNS: Security-> Standared protection.
+        -block third-party cookies or set it to "Block all cookies" for maximum privacy.
+        -Clear Browsing Data on Exit.
+        -Stop Autoplay:
+            Settings-> Privacy and Security-> Site and Shield Settings-> Autoplay->  block or allow autoplay.
+
+    -Shields Settings:
+        -"Ads," "Trackers," and "Fingerprinting" to block these elements on websites.
+
+        -Ad Blocker: 
+            -Settings-> Shields-> Trackers & ads blocking-> Aggressive or Standared.
+            -you can install extensions from the Chrome Web Store like: (uBlock Origin) or (AdBlock Plus).
+            -uBlock Origin: can prevent ads on youtube.
+    
+    -Free VPN: 
+        Brave's VPN is [NOT] Free, so you can use external tool: 
+        CloudFlare - Windscribe - ProtonVPN - Hotspot Shield for your all device.
+        note: Some VPN providers offer browser extensions that you can install directly in the Brave browser.
+              This can be a convenient option for users who only want to secure their browser traffic.
+
+    -Extensions: 
+        Review the extensions you have installed and their permissions.
+        Only install extensions from trusted sources, and regularly review the permissions they request.
+--------------------------------------------------------------------------------------------------------------------
+
+[jupyter]: https://brave.com/linux/#release-channel-installation 
+    1- python3 --version
+    2- sudo dnf install python3-notebook
+    3- jupyter notebook
+
+--------------------------------------------------------------------------------------------------------------------
+
+[Notion]:
+    The package manager needs to know where to find the package, so:  
+    1- Creating the repository file:
+        sudo nano /etc/yum.repos.d/notion-repackaged.repo
+
+    2- Paste the following contents in the File: 
+        (Essential Information to tell the package manager how to install the package)
+        
+        [notion-repackaged]
+        name=notion-repackaged
+        baseurl=https://yum.fury.io/notion-repackaged/
+        enabled=1
+        gpgcheck=0
+    
+    3- Install Notion or Notion-Enhanced: 
+        sudo dnf install notion-app-enhanced
+        sudo dnf install notion-app

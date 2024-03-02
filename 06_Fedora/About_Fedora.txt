@@ -1,0 +1,17 @@
+Small Iso File(2GB): 
+    that's require installing approximatilly 2GB of packages After Installation.
+
+you need to customize every thing after installation.
+
+RPM Fusion: 
+    Additional Repos that required to be installed after installation.
+    contains software packages that are not included in the official Fedora and RHEL repositories
+        due to licensing or other reasons.
+    divided into two repositories:
+        1-Free repository (rpmfusion-free):
+            Contains free and open-source software that complies with Fedora's licensing guidelines
+            It includes software like multimedia codecs, drivers, and other packages that may have legal or patent restrictions.
+        2-Non-free repository (rpmfusion-nonfree):  [ doesn't refer to a cost or price]
+            Contains software that does not comply with Fedora's licensing guidelines,
+            including proprietary software, drivers, and firmware.
+            Users can choose to enable this repository if they need access to non-free software.

@@ -1,0 +1,11 @@
+Yum: 
+    Stands for Yellowdog Updater Modified.
+
+    A command-line package management utility for RPM (Red Hat Package Manager) systems.
+
+    Used in RPM-based Linux distributions, such as Fedora and Red Hat Enterprise Linux (RHEL)
+
+    Yum was developed by the Linux community 
+        (to simplify) the process of installing, updating, and removing packages on RPM-based Linux distributions.
+
+    

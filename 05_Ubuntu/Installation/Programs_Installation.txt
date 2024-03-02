@@ -1,0 +1,41 @@
+[google chrome]: 
+    1- download the .deb package.
+    2-  cd ~/Downloads
+        sudo dpkg -i google-chrome-stable.deb (install the package and all it's dependancies)
+        sudo apt --fix-broken install         (to fix any returned issues)
+    3- delete the google chrome package from downloads
+
+[or simply you can install it with software install].
+
+________________________________________________________________________________________________________________
+[VLC]: 
+    update
+    sudo apt install vlc
+
+
+________________________________________________________________________________________________________________
+[Cloud-Flare]: 
+    before any thing, install curl: 
+    using apt: sudo apt install curl
+    using snap: sudo snap install curl
+
+
+    # Add cloudflare gpg key
+    curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+
+
+    # Add this repo to your apt repositories
+    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+
+
+    # Install
+    sudo apt-get update && sudo apt-get install cloudflare-warp
+
+
+
+    # after installing the program: use these commands: 
+    warp-cli --help
+    warp-cli --register
+    warp-cli connect
+
+    # follow this video after ending all the previous steps: https://www.youtube.com/watch?v=Yc-ribqN2zM

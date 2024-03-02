@@ -1,0 +1,28 @@
+Deb packages allow installing local software on an Ubuntu system.
+
+There are several ways to (install and remove deb packages): 
+    Install deb files through the [GUI]:
+        1- Software Center:
+            -Right-click the deb file, choose Open with Another Application.
+            -Select Software Install, 
+            -Click on the Install button to proceed.
+
+
+        2- GDebi GUI:
+            -Right-click on the deb file, choose Open With Other Application.
+            -Mark the GDebi Package Installer and click Select.
+            -The installer loads the deb package and shows the software description. Click Install Package to start the installation.
+            -Click on the Install button to proceed.
+
+
+    Install deb Files using the [Terminal]:
+        1- dpkg Command:
+            -sudo dpkg -i <package path>     (here write the full path)
+            If a package relies on unavailable dependencies, the dpkg command returns an error. Download any dependencies manually.
+
+
+        2- apt Package Manager:
+            -sudo apt install <package path> (here write the full path)
+            The package manager also locates and installs any dependencies automatically.
+
+        3- GDebi Package Installer:

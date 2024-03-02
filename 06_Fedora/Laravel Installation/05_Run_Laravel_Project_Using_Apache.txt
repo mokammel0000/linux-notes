@@ -1,0 +1,47 @@
+sudo systemctl enable httpd
+sudo systemctl start httpd
+
+
+
+you'll need to configure Apache to serve your Laravel project directory
+
+
+
+Create a virtual host configuration file for your Laravel project. You can do this by creating a new Apache configuration file in the /etc/httpd/conf.d/ directory. For example:
+sudo nano /etc/httpd/conf.d/lara-shop.conf
+
+
+
+
+Add the following configuration, replacing your-project with the name of your Laravel project directory:
+
+<VirtualHost *:80>
+    ServerName your-project.local
+    DocumentRoot /path/to/your-project/public
+
+    <Directory /path/to/your-project/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sudo systemctl restart httpd

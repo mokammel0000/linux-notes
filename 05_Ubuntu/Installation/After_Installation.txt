@@ -1,0 +1,52 @@
+Run this command: 
+    [sudo apt-get -f install] : Fix broken dependencies and install missing packages.
+    [sudo apt install gdebi]  : Install Gdebi.
+
+
+___________________________________________________________________________________________________
+After Installation: 
+    https://mmbesar.github.io/Tutorials/Ubuntu-22.04-Post/
+    https://mmbesar.github.io/Tutorials/Ubuntu-22.10-Post/
+
+    Installing Flatpak: 
+        sudo apt install gnome-software gnome-software-plugin-flatpak flatpak
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+    Extensions and Tweaks: 
+        sudo apt install chrome-gnome-shell gnome-shell-extension-prefs
+        sudo apt install gnome-tweaks gnome-shell-extension-manager
+
+___________________________________________________________________________________________________   
+One Word: 
+    # My Commands
+    alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
+    alias update_flatpak='flatpak update -y'
+    alias snap='sudo snap refresh'
+
+    add this line to:
+        .bashrs(if u are using bash terminal -default one-)or
+        .zshrc(if u are using ZSH).
+
+    then close the terminal and reopen it...
+
+___________________________________________________________________________________________________
+Genome Extinsions: 
+    1- Dash to Dock
+
+    2-Vitals
+        Install support packages (https://github.com/corecoding/Vitals)
+            sudo apt install gnome-shell-extension-manager gir1.2-gtop-2.0 lm-sensors
+            then configure it's settings.
+
+    3- Clipboard History
+
+___________________________________________________________________________________________________
+Installing Office package: 
+    https://www.wps.com/blog/how-to-install-and-use-microsoft-word-for-ubuntu-linux-step-by-step
+    https://www.youtube.com/watch?v=4QqFBs0aW4s
+    https://www.youtube.com/watch?v=LH-6tp-KBuQ
+
+    Download MS-OFFICE 2013:
+    https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDRxc3N4ZWdiTUNOSGc5N2UwbjJKd0l2dEZRQXxBQ3Jtc0tsZkYtYXJ0ZHI5UUtvSVV6ekZuTUhPd2hCd3JVM1pSU0c1eS15OVNnYUN0N0h1LWE4UXZGakk0SlVaWjN6OWdUT3p4YWFCZEVyU19mMld3TjFteklncVlvcEFvT1JHQ0NZSElzZ1dOSVd3VjBFTFlqSQ&q=https%3A%2F%2Fdownloads.yourtechshow.com%2F2020%2F03%2Fmicrosoft-office-professional-plus-2016.html&v=doSSB0AZnts
+
+___________________________________________________________________________________________________

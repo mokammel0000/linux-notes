@@ -1,0 +1,68 @@
+-MariaDB and MySQL packages (conflict) because they provide similar files.
+    So, you can only install one of them, either MariaDB or MySQL, but not both.
+
+-Install the necessary database server before installing PHP and its related packages,
+    to ensure that any PHP packages requiring interaction with the database (like PDO extensions for MySQL or PostgreSQL)
+    are installed correctly and can connect to the database server without issues.
+
+
+
+[Update] your system before installation...
+
+MySQL 8.0 community edition:
+
+    https://www.tecmint.com/install-mysql-fedora-linux/
+    https://tecadmin.net/install-mysql-57-on-fedora/
+    https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/
+
+    -you can Install mysql-server or mysql(the client virsion)
+        Install MySQL client if you: 
+            -need to connect to the MySQL server from another machine 
+            -or use the MySQL command-line interface
+
+    you can either install it from (Fedora Main Repo) or from (Oracle MySQL)
+        -Fedora Main Repo: saves us from more complex steps.
+        -Oracle MySQL Repo: provide the the most recent version of MySQL
+
+    1- Mysql Installation:
+        
+        --Fedora Main Repo Installation:
+            1- Install the service: 
+                [sudo dnf install community-mysql-server] use it
+                or [sudo dnf install mysql-server]
+
+            2- start and enabel the service to use.
+                [systemctl status mysqld]: Mysql will be in an inactive state after installation.
+                [sudo systemctl start mysqld]: enabling MySQL service.
+                [sudo systemctl enable mysqld]: to start MySQL at each boot.
+
+
+        --Oracle Repo Installation: 
+            1- download the repo from here: https://dev.mysql.com/downloads/repo/yum/
+            2- [sudo dnf install <path to downloaded rpm>]: to install the (repo) itself.
+            3- [sudo dnf install mysql-community-server]: to install the (repo) itself.
+            4- start and enabel the service to use.
+
+
+    2- Securing MySQL in Fedora Linux:
+        The default installation of MySQL is weak by modern standards of security and can easily be manipulated by hackers.
+        There are multiple ways to secure your MySQL, but the simplest yet most effective is to use a secure script.
+
+        Enter a new password for the service: I use the medium one: @Fabercastell0000
+        -Remove anonymous users?: y
+        -Disallow root login remotely?: n
+        -Remove test database and access to it?: n
+        -Reload privilege tables now?: y
+        
+    [sudo mysql -u root -p]: write the password of sudo then write the password for mysql service.
+    SHOW DATABASES;
+    
+
+    3- other commands: 
+    [sudo dnf update mysql-server]: to update it if there any updates in its repo.
+    [sudo dnf remove community-mysql-server]
+
+    
+-----------------------------------------------------------------------------------------------------
+Maria DB: 
+https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/

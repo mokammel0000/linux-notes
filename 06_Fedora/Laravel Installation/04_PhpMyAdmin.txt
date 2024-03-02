@@ -1,0 +1,14 @@
+PhpMyAdmin: 
+    update
+    [sudo apt install phpmyadmin]: 
+        select apache2 as a web server.
+        choose a password for phpmyadmin.
+
+    By default, phpMyAdmin is installed but not enabled in Apache.
+    You need to create a symbolic link in the Apache configuration directory to enable phpMyAdmin:
+    [sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf]
+
+    Then, enable this configuration:
+    [sudo a2enconf phpmyadmin]
+
+    [sudo systemctl restart apache2]

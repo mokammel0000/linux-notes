@@ -1,0 +1,57 @@
+dpkg:
+    Stands for "Debian Package Manager" and it allows you to perform various package-related operations.
+    
+    Command -in Debian-based Linux distros- used for managing software packages on your system.
+    A lower-level package management tool used by APT.
+
+
+
+    In practice, most users prefer to use apt (or its frontends like apt-get and aptitude) for day-to-day package management tasks.
+    It provides a higher level of abstraction and takes care of many complexities associated with package management,
+        making it easier for users to work with software packages.
+
+    dpkgis typically used directly only in specific situations,
+        such as when (manually installing packages from local.deb files) or when (troubleshooting package issues).
+
+
+    Commands to install or remove a package: 
+        [sudo dpkg -i package.deb]   -install a package(firstly download the file).
+        [sudo dpkg -r package-name]  -uninstall a package.
+
+-------------------------------------------------------------------------------------------------------------------------------
+Differences between [apt] and [dpkg]: 
+    -Package Management Level:
+        dpkg operates at a lower level of the package management stack.
+            It is responsible for the installation, removal, and querying of individual package files (.deb) on a local system.
+            It doesn't handle package dependencies or repository management.
+
+        apt (Advanced Package Tool) operates at a higher level.
+            It is a more user-friendly package management tool that automates tasks like resolving
+                and installing package dependencies, retrieving packages from online repositories, 
+                and handling package upgrades and installations. 
+        
+        (apt uses dpkg under the hood for package installation and removal)
+
+
+    -Dependency Resolution:
+        dpkg does not automatically resolve or install dependencies.
+            If a package requires other packages to function correctly,
+            you need to manually install those dependencies before or after installing the package itself.
+        
+        apt automatically resolves and installs dependencies for you.
+            When you use apt to install or upgrade a package, it checks the package's dependencies and installs them if necessary.
+
+
+    -Repository Management:
+        dpkg doesn't interact with online repositories. It works only with local package files.
+        
+        apt manages online repositories.
+            It can update the package lists from repositories, fetch packages from them, and keep your system up-to-date with the latest software versions.
+
+
+    -Ease of Use:
+        dpkg is more manual and requires the user to handle many aspects of package management,
+            such as downloading, installing, and resolving dependencies manually.
+
+        apt is more user-friendly and automates many package management tasks.
+            It provides a simpler and more convenient way to install, update, and manage software packages.

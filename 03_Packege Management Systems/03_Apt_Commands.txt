@@ -1,0 +1,55 @@
+General: 
+    [sudo apt update]
+        refresh the package list on your system (To synchronizes the configured repositories).
+        does not install or upgrade any packages
+
+    [sudo apt upgrade] or [sudo apt upgrade -y]
+        upgrade installed packages on your system to their latest available versions(actually install the updates).
+
+
+    [sudo apt check]
+        scans for damaged dependencies and updates the module cache.
+
+    [sudo apt clean]
+        used to exclude all recovered package files from the local registry.
+        It deletes everything from /var/cache/apt/archives/partial/ and /var/cache/apt/archives/ except the lock file.
+
+    [sudo apt autoremove]
+        Removing the packages that your system nolonger needs them.
+
+------------------------------------------------------------------------------------------------------------------------------
+List Packeges:
+    [sudo apt list]
+        Browsing and searching for available packages that you can install.
+        Lists all available packages from the configured repositories, (including those that are not installed on your system).
+
+    [sudo apt list --installed]
+        lists only the packages that are currently installed on your system.
+
+    [sudo apt list package_name]
+        search for information about a specific package
+
+    [apt search search_term]
+
+------------------------------------------------------------------------------------------------------------------------------
+Dealing with a specific Package:
+    [sudo apt install package_name]
+    [sudo apt -y install package_name] # instead of Pressing Y
+        It prints the name of packages associated with the program.
+        It also prints the required disk size to install them.
+        Before installing the program, the command takes permission from the user.
+
+    [sudo apt remove package_name]
+        Deletes the program but keeps its configuration file.
+
+    [sudo apt purge package_name]
+        Deletes the program and removes its configuration file.
+
+    [apt show package_name]
+
+    sudo apt list –installed | grep filezilla
+    filezilla --version
+    filezilla
+
+    dpkg --list
+    apt list --installed

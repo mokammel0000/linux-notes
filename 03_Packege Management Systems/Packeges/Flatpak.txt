@@ -1,0 +1,5 @@
+flatpak list
+
+flatpak install flathub org.mozilla.Firefox
+
+flatpak uninstall ApplicationId

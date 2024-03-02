@@ -1,0 +1,14 @@
+all from flatpak store
+    -vscode 
+    -dbeaver (after install mysql-server)
+    -postman 
+    -github disktop (after install and update git)
+    -filezilla
+    -phpstorm
+
+
+from it's website, downaload the .deb file: 
+    mysql workbensh: 
+        https://www.youtube.com/watch?v=EYc9DNYyiW4         : the video
+        https://dev.mysql.com/downloads/workbench/          : to download the application.
+        sudo apt install ./mysql*****.deb                   : to install it.

@@ -1,0 +1,97 @@
+sudo dnf --refresh update
+
+Install php and it's packages: 
+	[sudo dnf install php]:
+		main PHP package along with the necessary components for running PHP in a web server environment, 
+		if you want to install php 8.3: (https://php.watch/articles/php-8.3-install-upgrade-on-fedora-rhel-el#php83-fedora-quick).
+	
+	[php -v]
+
+	[php -m]: 
+		The default PHP installation in Fedora typically includes a set of commonly used modules.
+		To check the specific PHP modules available in your installation. 
+
+	[sudo dnf install php-cli php-common php-mysqlnd php-pdo php-curl php-zip php-mbstring php-bcmath php-gd php-pecl-imagick php-json php-xml php-xmlrpc php-soap php-opcache php-intl php-mcrypt php-ldap php-pecl-apcu php-pear php-fpm php-process php-tokenizer]
+	تبقى تشوف مين مش متسطب ونزله، أو ممكن تحطهم كلهم والي مش متسطب كده كده هينزل لوحده بدون ما يأثر على الباقي
+
+
+
+	[php-cli]:
+		php package that's designed for running PHP scripts from the command line rather than within a web server context.
+		Allow you to execute PHP scripts directly in a terminal or script files.
+		This package is useful for tasks such as script automation, running standalone PHP scripts, or performing command-line operations using PHP.
+
+	[php-common]: Core files for PHP.
+
+	[php-mysqlnd]:
+		provides the MySQL Native Driver (mysqlnd) extension for PHP.
+		more modern and feature-rich extension that is part of the PHP core starting from PHP 5.4.0.
+		offers better performance, security, and compatibility with newer PHP versions.
+		
+	[php-mysql]: (don't install, unless you need it)
+		provides the traditional MySQL extension for PHP.
+		traditional MySQL extension for PHP.
+		has been deprecated as of PHP 7.0.0, and it was completely removed in PHP 7.2.0.
+
+	if you are using a different database: 
+		PostgreSQL:  [sudo dnf install php-pgsql]
+		SQLite:      [sudo dnf install php-sqlite]
+
+	[php-pdo]: PHP Data Objects extension, providing a uniform method of access to multiple databases.
+	
+	[php-curl]: 
+		PHP extension that provides support for the cURL library.
+		The cURL extension allows PHP to (make HTTP requests) and interact with various network protocols.
+		It is commonly used for sending HTTP requests to APIs, fetching remote data, and performing other tasks related to network communication.
+	
+	[php-zip]:
+		provides functionality for handling ZIP archives.
+		It allows you to create, read, and manipulate ZIP files directly from PHP scripts.
+
+	[php-mbstring]: 
+		Multibyte string functions that can handle different character encodings. Useful for internationalization and Unicode support.
+		
+	[php-bcmath]:
+		provides arbitrary precision mathematics functions.
+		It enables you to perform mathematical operations with arbitrary precision,
+			which can be especially useful in cases where standard floating-point arithmetic may not provide sufficient precision.
+
+	[php-gd]: Enables the GD library, allowing PHP to create and manipulate images.
+	
+	[php-pecl-imagick]: Provides a PHP extension for the ImageMagick library, allowing for image manipulation and conversion.
+
+	[php-json]: Provides support for JSON (JavaScript Object Notation) encoding and decoding.
+
+	[php-xml]: Adds support for handling XML documents in PHP.
+
+	[php-xmlrpc]: Implements the XML-RPC protocol, allowing for remote procedure calls over HTTP.
+	
+	[php-soap]: Supports the Simple Object Access Protocol (SOAP) for web services.
+
+	[php-opcache]: Zend OPcache improves PHP performance by storing precompiled script bytecode in shared memory.
+
+	[php-intl]: 
+		Provides internationalization and localization support, including:
+		formatting of dates, times, and numbers according to various locales.
+
+	[php-mcrypt]: 
+		Legacy module for encryption and decryption using the mcrypt library. Note that mcrypt is deprecated in PHP 7.1 and removed in PHP 7.2.
+		
+	[php-ldap]: Adds support for LDAP (Lightweight Directory Access Protocol) in PHP.
+
+	[php-pecl-apcu]: 
+		User data caching for PHP. It can be used to improve the performance of your web applications by storing data in memory.
+
+	[php-pear]: PHP Extension and Application Repository framework for distributing PHP components.
+	
+	[php-fpm]: PHP FastCGI Process Manager for handling PHP requests.
+
+	[php-process]: PHP process handling module.
+
+	[php-tokenizer]: provides functions to parse PHP source code into tokens, which can then be analyzed or manipulated.
+
+
+	restart your web server for the changes to take effect: 
+
+	If you are using Apache: [sudo systemctl restart httpd]
+	If you are using Nginx:  [sudo systemctl restart nginx]

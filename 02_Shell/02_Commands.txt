@@ -1,0 +1,4 @@
+Open Your Shell Configuration File:
+    nano ~/.bashrc
+
+

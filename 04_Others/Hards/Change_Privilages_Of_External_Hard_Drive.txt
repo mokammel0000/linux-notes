@@ -1,0 +1,22 @@
+https://linuxsimply.com/linux-change-permissions-on-mounted-drive/#:~:text=Step%2002%3A%20Change%20permission%20on%20Mounted%20Drive%20in%20Ubuntu,-Now%20I%20will&text=%E2%9E%8A%20Press%20CTRL%2BALT%2BT%20to%20launch%20an%20Ubuntu%20Terminal.&text=sudo%3A%20Grants%20root%20privileges.,permissions%20for%20Owner%20and%20Group.
+
+>>df: 
+    list all the mounted drives.
+
+>>ls -l /dev/sda3: 
+    view permissions of mounted drive “/dev/sda3”.
+
+>>sudo chown -R galaxy:galaxy /media/galaxy/Backup/Data/
+    Recursively changes the ownership of all files and directories under /media/galaxy/Backup/Data/ 
+    to the user "galaxy" and the group "galaxy."
+
+>>sudo chmod -R 755 /media/galaxy/Backup/Data/:
+    Sets the permissions of all files and directories under /media/galaxy/Backup/Data/ to 755, 
+    which means the owner can (read), (write), and (execute),
+    while the group and others can read and execute.
+
+>>ls -l /dev/sda3: 
+    verfiy that the permissions has been added succusfully.
+
+    
+[Then unmount(eject) and mount the hard-drive to apply the new permissions settings]

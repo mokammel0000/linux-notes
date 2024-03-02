@@ -1,0 +1,34 @@
+fdisk:
+    Is a (command-line utility) used for disk partitioning in various Linux distributions.
+    
+    It allows users to create, delete, and manipulate disk partitions on a storage device.
+    
+        Here are some common tasks that fdisk can help you with:
+
+        1- Creating Partitions:
+            You can use fdisk to (create new partitions) on a disk.
+
+        2- Deleting Partitions:
+            If you want to (remove a partition) from a disk, fdisk can help you delete it.
+
+        3- Changing Partition Type:
+            fdisk allows you to (change the type of a partition).
+            For example, you can change a partition from a primary partition to an extended partition.
+
+        4- Displaying Partition Information:
+            You can use fdisk to (display information) about the existing partitions on a disk,
+            such as their size, type, and the file system they use.
+
+        5- Writing Changes to Disk:
+            After making changes to the partition table, you need to write the changes to the disk.
+            fdisk provides an option to save the changes.
+
+
+
+Note:
+    If you're not familiar with disk partitioning or if you need to perform more complex tasks,
+    you might also consider using other tools like (parted) or (gparted), 
+    which provide a more user-friendly interface for managing partitions. 
+
+    Additionally, for modern systems that use the GUID Partition Table (GPT) instead of the older Master Boot Record (MBR),
+    gdisk or gparted are often more suitable. 

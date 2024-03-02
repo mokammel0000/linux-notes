@@ -1,0 +1,8 @@
+Sudo: 
+    superuser do
+    Software management is a privileged task, It needs confirmation from the user.
+    
+    It is used to execute commands with elevated privileges or as the "superuser" or "root" user,
+    which has the highest level of access and control over the system.  
+    
+    it's often required when performing administrative tasks or making system-wide changes.

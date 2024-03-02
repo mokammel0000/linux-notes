@@ -1,0 +1,24 @@
+RPM: 
+    Stands for (Red Hat Package Manager).
+
+    Used in Fedora, CentOS and Red Hat Enterprise Linux (RHEL).
+
+    RPM is a low-level package management system 
+        used for installing, uninstalling, upgrading, querying, and verifying software packages on a Linux system.
+
+    It primarily deals with (individual packages in the form of .rpm files).
+
+    RPM itself (does not resolve dependencies),
+        so users may need to manually install dependencies for a package to work correctly.
+
+    DNF and Yum use it as an Underlying tool.
+
+
+    Commands: 
+        sudo rpm -ivh __.rpm : to install an .rpm package (firstly download the package).
+        sudo rpm -Uvh __.rpm : to upgrade the pakage before installing it.
+
+        i: install 
+        U: upgrade 
+        v: verbose - give me details while installing the package.
+        h: hashing - ### showing the % bar while installing. 

@@ -1,0 +1,14 @@
+If it wasn't installed yet: 
+    sudo apt install git
+
+
+Git is already installed in your machine, but in an old version, 
+to update it, you must update the git repo, so do this: 
+
+    -sudo add-apt-repository ppa:git-core/ppa
+
+    -sudo apt update
+
+    -sudo apt upgrade
+
+    -git --version

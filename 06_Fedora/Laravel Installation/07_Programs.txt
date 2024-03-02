@@ -1,0 +1,33 @@
+Install Its Package, then Install It: 
+
+    -VS Code
+        Install its repo and then install it (to get the most recent shourtcuts).
+
+------------------------------------------------------------------------------------------------------------------------
+Manually Installation: 
+
+    -Dbeaver (after install mysql-server)
+        Download the .rpm package
+        Install it using: sudo rpm -Uvh ___.rpm (to avoid the weekly updates)
+
+        if it gives you this error: "Public Key Retrieval is not allowed",
+            use this url to connect to the localhost: "jdbc:mysql://localhost:3306/?allowPublicKeyRetrieval=true"
+            or use this to connect to a special db: "jdbc:mysql://localhost:3306/your_database?allowPublicKeyRetrieval=true"
+
+------------------------------------------------------------------------------------------------------------------------
+Snap Package: 
+
+    -Postman :  sudo snap install postman or  snap install postman(I don't know which one).
+        Postman recommends installing using Snap,
+        because it includes all the libraries the app needs and they're bundled with the app itself.
+
+------------------------------------------------------------------------------------------------------------------------
+Flatpak Package: 
+    -Github disktop (after install and update git)
+        1- flatpak search github: git github desktop id
+        2- flatpak install flathub io.github.shiftey.Desktop: flatpak install flathub <github-desktop-package-name>
+        3- flatpak run io.github.shiftey.Desktop
+
+    -Filezilla
+
+    -Phpstorm

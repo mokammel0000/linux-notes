@@ -1,0 +1,33 @@
+Install Phpunit: 
+	you can Install it globally on your system using: [sudo dnf install phpunit]
+	it's generally better to manage project dependencies with Composer to ensure consistency across different environments and projects.
+	so, instll phpunit in a specific project using the composer: (composer require --dev phpunit/phpunit)
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+Install Composer:
+    Composer is a dependency manager for PHP, allowing you to manage PHP packages and libraries easily.
+
+	[sudo dnf install composer]
+
+	[sudo dnf install composer unzip]: 
+        Not only installs Composer but also installs the unzip package alongside it.
+        unzip is a utility for extracting, viewing, and testing the contents of ZIP files.
+	
+        So, it's not only installs Composer, but also ensures that the unzip utility is available on your system.
+        This can be useful if you intend to work with ZIP files in your PHP projects and need a tool to extract them.
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+Install Redis: 
+	[sudo dnf install redis]
+	[sudo dnf install php-pecl-redis]: Adds support for the Redis key-value store in PHP.
+
+	
+---------------------------------------------------------------------------------------------------------------------------------
+Install Node.js and NPM: 
+	[sudo dnf install nodejs npm]
+	[npm install -g yarn]: 
+		Yarn is an alternative package manager for Node.js. 
+		While it's optional, many Laravel developers prefer using it for faster and more efficient package installations.
+		إنته حاليا بتستخدم npm، فا مش لازم تسطبه إلا لما تحتاجه

@@ -1,0 +1,48 @@
+[To list all block devices and their partitions]:
+    lsblk
+
+
+----------------------------------------------------------------------------------- 
+[Secure Erase]:
+    For enhanced security,
+        you may want to perform a secure erase to ensure that all data on the drive is completely wiped.
+    You can use tools like hdparm for this purpose.
+    
+    sudo dnf install hdparm
+    sudo hdparm --security-erase-enhanced /dev/sda
+        "this command will erase all data on the drive"
+
+
+----------------------------------------------------------------------------------- 
+[Check for File System Errors]:
+    To check and repair file system (e.g., NTFS, ext4) errors
+        sudo dnf install ntfs-3g
+        sudo ntfsfix /dev/sda
+
+    For ext4: Use
+        sudo e2fsck /dev/sda
+
+
+----------------------------------------------------------------------------------- 
+[Check S.M.A.R.T. Status]: 
+    Self-Monitoring, Analysis and Reporting Technology (S.M.A.R.T.) 
+
+    sudo dnf install smartmontools
+    sudo smartctl -a /dev/sda
+        "Look for any warning signs or indications of potential issues"
+
+----------------------------------------------------------------------------------- 
+To check and repair inconsistencies in a file system:
+    sudo fsck /dev/sda 
+        "check the logical issues and Repair it with yourself"
+    sudo fsck -a /dev/sda 
+        "automatically repair"
+
+-----------------------------------------------------------------------------------
+
+Bad Blocks Test:  [areas of the storage medium that may be unreliable or failing]
+
+    sudo apt-get install e2fsprogs
+    sudo umount /dev/sda
+    sudo badblocks -v /dev/sda:  "a read-only test for bad blocks"
+
